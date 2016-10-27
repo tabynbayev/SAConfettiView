@@ -98,7 +98,7 @@ open class SAConfettiView: UIView {
 
     func confettiWithColor(_ color: UIColor) -> CAEmitterCell {
         let confetti = CAEmitterCell()
-        confetti.birthRate = 6.0 * intensity
+        confetti.birthRate = 40.0 * intensity
         confetti.lifetime = 14.0 * intensity
         confetti.lifetimeRange = 0
         confetti.color = color.cgColor
@@ -108,6 +108,7 @@ open class SAConfettiView: UIView {
         confetti.emissionRange = CGFloat(M_PI_4)
         confetti.spin = CGFloat(3.5 * intensity)
         confetti.spinRange = CGFloat(4.0 * intensity)
+        confetti.scale = CGFloat(0.6)
         confetti.scaleRange = CGFloat(intensity)
         confetti.scaleSpeed = CGFloat(-0.1 * intensity)
         confetti.contents = imageForType(type)!.cgImage
